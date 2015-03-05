@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>Places We've Been</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css'>
+</head>
+<body>
+    {% for place in places %}
+        <li>{{place.getCity}}</li>
+        {% endfor %}
+
+
+
+    <div class='container'>
+      <form action = '/mary' method='post'>
+            <div class='form-group'>
+                <label for='city'>Enter the city</label>
+                <input id='city' name='city' class='form-control' type='text'>
+            </div>
+            <div class='form-group'>
+                <label for='state'>Enter the state</label>
+                <input id='state' name='state' class='form-control' type='text'>
+            </div>
+            <div class='form-group'>
+                <label for='cow'>Enter the year</label>
+                <input id='cow' name='cow' class='form-control' type='text'>
+            </div>
+            <button type='submit'>Go</button>
+        </form>
+
+        <form action = '/delete' method='post'>
+            <button type= 'submit'>Clear all</button>
+        </form>
+
+
+    </div>
+</body>
+</html>
